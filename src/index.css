@@ -130,7 +130,7 @@ code {
 	--font-body: 'Inter', sans-serif;
 }
 
-.post-card {
+/* .post-card {
 	transition:
 		transform 0.3s ease,
 		box-shadow 0.3s ease;
@@ -140,4 +140,4 @@ code {
 	box-shadow:
 		0 20px 40px rgba(0, 0, 0, 0.5),
 		0 0 0 1px rgba(251, 191, 36, 0.2);
-}
+} */

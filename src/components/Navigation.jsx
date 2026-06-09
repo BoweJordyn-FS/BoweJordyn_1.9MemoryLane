@@ -22,13 +22,13 @@ export default function Navigation() {
 					<nav className="flex items-center gap-6">
 						<Link
 							to="/"
-							className="text-amber-400 font-mono text-sm tracking-wide hover:text-[#986315]"
+							className="text-amber-400 font-mono text-sm tracking-wide hover:text-[#986315] transition duration-150 hover:-translate-y-1 ease-in-out"
 						>
 							The Archive
 						</Link>
 						<Link
 							to="/about"
-							className="tracking-wide hover:text-[#986315]"
+							className="tracking-wide hover:text-[#986315] transition duration-150 hover:-translate-y-1 ease-in-out"
 						>
 							About
 						</Link>
