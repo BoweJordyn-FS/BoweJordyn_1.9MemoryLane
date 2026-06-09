@@ -1,6 +1,6 @@
 ---
 title: 'Learning React and Markdown'
-date: '2023-11-15'
+date: 'November 15, 2023'
 excerpt: 'Using react-markdown to render content makes writing blog posts so much easier.'
 ---
 
@@ -19,7 +19,7 @@ Using `react-markdown` to render content makes writing blog posts so much easier
 ```js
 import ReactMarkdown from 'react-markdown';
 
-<ReactMarkdown>{content}</ReactMarkdown>
+<ReactMarkdown>{content}</ReactMarkdown>;
 ```
 
 That's all it takes!

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function Navigation() {
 	return (
 		<nav>
-			<header className="border-b border-amber-400 sticky top-0 z-50 backdrop-blur-sm">
+			<header className="border-b border-[#986315] sticky top-0 z-50 backdrop-blur-sm">
 				<div className="max-w-4xl mx-auto py-4 flex justify-between">
 					{/* Logo/Brand */}
 					<Link
@@ -22,15 +22,16 @@ export default function Navigation() {
 					<nav className="flex items-center gap-6">
 						<Link
 							to="/"
-							className={`font-mono text-sm transition-colors duration-200 ${
-								location.pathname === '/'
-									? 'text-amber-400'
-									: 'text-ink-400 hover:text-ink-100'
-							}`}
+							className="text-amber-400 font-mono text-sm tracking-wide hover:text-[#986315]"
 						>
 							The Archive
 						</Link>
-						<Link to="/about">About</Link>
+						<Link
+							to="/about"
+							className="tracking-wide hover:text-[#986315]"
+						>
+							About
+						</Link>
 					</nav>
 				</div>
 			</header>

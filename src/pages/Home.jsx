@@ -1,12 +1,9 @@
 import { Link } from 'react-router-dom';
-import posts from '../posts/index';
-import Navigation from '../components/Navigation';
-import { MdxFlowExpression } from '../../node_modules/mdast-util-mdx-expression/index.d';
+import { posts } from '../posts/index';
 
 export default function Home() {
 	return (
 		<div>
-			<Navigation />
 			<main className="max-w-4xl mx-auto px-6 py-16 page-enter">
 				<h1 className="text-5xl font-bold mb-4 tracking-wide ">
 					<span className="text-white  text-ink-50 leading-tight mb-4 font-display">
@@ -25,21 +22,26 @@ export default function Home() {
 				</h3>
 				<ul className="space-y-4 m-3">
 					{posts.map((post) => (
-						<li
-							key={post.slug}
-							className="border border-[#F9BE25] p-4 rounded-lg bg-[#1A140F]"
+						<Link
+							to={`/post/${post.slug}`}
+							className="text-xl font-semibold font-display tracking-wide "
 						>
-							<div>
-								<Link
-									to={`/post/${post.slug}`}
-									className="text-xl font-semibold hover:underline"
-								>
-									{post.title}
-								</Link>
-								<p className="text-lg text-gray-600">{post.excerpt}</p>
-							</div>
-							<div>read more →</div>
-						</li>
+							<li
+								key={post.slug}
+								className="post-card border border-[#986315] p-4 rounded-sm bg-[#1A140F] mb-5"
+							>
+								<span className="hover:underline">{post.title}</span>
+								<p className="text-sm text-[#8D7762] mt-2">{post.excerpt}</p>
+								<div className="display flex flex-row justify-between items-center mt-4">
+									<p className="text-[#8D7762] font-mono text-xs">
+										{post.date}
+									</p>
+									<span className="text-amber-500 text-xs font-mono">
+										read →
+									</span>
+								</div>
+							</li>
+						</Link>
 					))}
 				</ul>
 			</main>

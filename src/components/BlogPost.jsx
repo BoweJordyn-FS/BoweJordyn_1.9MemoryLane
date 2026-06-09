@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import matter from 'gray-matter';
-import posts from '../posts/index';
+import { posts } from '../posts/index';
 
 const BlogPost = () => {
 	const { slug } = useParams();
@@ -13,12 +13,19 @@ const BlogPost = () => {
 		<article className="max-w-2xl mx-auto p-6">
 			<Link
 				to="/"
-				className="text-blue-600 hover:underline"
+				className="text-[#986315] hover:underline font-mono"
 			>
-				← Back
+				← all posts
 			</Link>
-			<h1 className="text-3xl font-bold mt-4 mb-2">{data.title}</h1>
-			<div className="prose mt-6">
+			<div>
+				<h1 className="text-3xl font-bold mt-10 mb-2">{data.title}</h1>
+				<h5 className="text-[#8D7762] italic">{data.excerpt}</h5>
+				<p className="text-[#8D7762] font-mono text-xs flex justify-end">
+					{data.date}
+				</p>
+			</div>
+			<hr className="fancy-rule m-6" />
+			<div className="prose prose-invert mt-6">
 				<ReactMarkdown>{content}</ReactMarkdown>
 			</div>
 		</article>

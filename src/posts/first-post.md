@@ -1,6 +1,6 @@
 ---
 title: 'Why I Love React'
-date: '2025-12-23'
+date: 'December 23, 2025'
 excerpt: 'React changed my life'
 ---
 
