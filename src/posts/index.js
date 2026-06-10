@@ -8,13 +8,8 @@ const files = [
 	{ slug: 'first-post', raw: firstPostRaw },
 	{ slug: 'second-post', raw: secondPostRaw },
 	{ slug: 'third-post', raw: thirdPostRaw },
-
-	// Add more posts here
 ];
-const aboutFiles = [
-	{ slug: 'about', raw: aboutRaw },
-	// Add more posts here
-];
+const aboutFiles = [{ slug: 'about', raw: aboutRaw }];
 
 const posts = files.map(({ slug, raw }) => {
 	const { data } = matter(raw);
