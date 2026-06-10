@@ -1,7 +1,7 @@
 ---
 title: 'Learning Express was way easier than I expected'
 date: 'June 08, 2026'
-excerpt: 'Backend development" used to sound intimidating. Servers, routing, databases I assumed there was a steep learning curve before anything would work. But last month is when I realized the backend wasnt something to fear.'
+excerpt: 'Backend development used to sound intimidating. Servers, routing, databases I assumed there was a steep learning curve before anything would work. But last month is when I realized the backend wasnt something to fear.'
 ---
 
 When I started coding off the bat, I wanted to be a full-stack developer because I wanted to be able to do everything without relying on other people, or in case I wanted to go freelance. However, once I started learning vanilla JavaScript and Node, that quickly changed. The whole idea of being a _full stack_ developer, someone who could confidently build on both sides of the stack, felt like a title I'd never earn.
