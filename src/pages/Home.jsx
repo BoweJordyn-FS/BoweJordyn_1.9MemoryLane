@@ -25,11 +25,9 @@ export default function Home() {
 						<Link
 							to={`/post/${post.slug}`}
 							className="text-xl font-semibold font-display tracking-wide "
+							key={post.slug}
 						>
-							<li
-								key={post.slug}
-								className="post-card border border-[#986315] p-4 rounded-sm bg-[#1A140F] mb-5 transition duration-150 hover:-translate-y-1 hover:scale-100 ease-in-out hover:bg-[#1A140F]/80"
-							>
+							<li className="post-card border border-[#986315] p-4 rounded-sm bg-[#1A140F] mb-5 transition duration-150 hover:-translate-y-1 hover:scale-100 ease-in-out hover:bg-[#1A140F]/80">
 								<span className="hover:underline">{post.title}</span>
 								<p className="text-sm text-[#8D7762] mt-2">{post.excerpt}</p>
 								<div className="display flex flex-row justify-between items-center mt-4">
