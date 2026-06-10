@@ -2,12 +2,14 @@ import matter from 'gray-matter';
 import firstPostRaw from './first-post.md?raw';
 import secondPostRaw from './second-post.md?raw';
 import thirdPostRaw from './third-post.md?raw';
+import fourthPostRaw from './fourth-post.md?raw';
 import aboutRaw from './about-me.md?raw';
 
 const files = [
 	{ slug: 'first-post', raw: firstPostRaw },
 	{ slug: 'second-post', raw: secondPostRaw },
 	{ slug: 'third-post', raw: thirdPostRaw },
+	{ slug: 'fourth-post', raw: fourthPostRaw },
 ];
 const aboutFiles = [{ slug: 'about', raw: aboutRaw }];
 
