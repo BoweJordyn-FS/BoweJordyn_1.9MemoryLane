@@ -1,16 +1,62 @@
-# React + Vite
+# Memory Lane
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal tech journal built with React and Markdown. Posts are written in `.md` files with frontmatter and rendered in the browser using `react-markdown`.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [React](https://react.dev/) — UI framework
+- [Vite](https://vitejs.dev/) — build tool
+- [Tailwind CSS v4](https://tailwindcss.com/) — styling
+- [react-router-dom](https://reactrouter.com/) — client-side routing
+- [react-markdown](https://github.com/remarkjs/react-markdown) — renders markdown content
+- [gray-matter](https://github.com/jonschlinkert/gray-matter) — parses frontmatter from `.md` files
 
-## React Compiler
+## Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+├── components/
+│   ├── BlogPost.jsx      # Single post page
+│   └── Navigation.jsx    # Site header/nav
+├── pages/
+│   ├── Home.jsx          # Post listing page
+│   └── About.jsx         # About page
+├── posts/
+│   ├── index.js          # Post registry
+│   ├── first-post.md
+│   ├── second-post.md
+│   └── about-me.md
+└── App.jsx               # Route definitions
+```
 
-## Expanding the ESLint configuration
+## Adding a New Post
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Create a new `.md` file in `src/posts/` with frontmatter:
+
+```md
+---
+title: 'My New Post'
+date: 'June 9, 2026'
+excerpt: 'A short description shown on the home page.'
+---
+
+content here...
+```
+
+2. Register it in `src/posts/index.js`:
+
+```js
+import myPostRaw from './my-new-post.md?raw';
+
+const files = [
+	// ...existing posts
+	{ slug: 'my-new-post', raw: myPostRaw },
+];
+```
+
+## Running Locally
+
+```bash
+npm install
+npm run dev
+```
