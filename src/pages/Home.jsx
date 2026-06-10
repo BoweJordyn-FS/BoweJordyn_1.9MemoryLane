@@ -20,7 +20,7 @@ export default function Home() {
 					{' '}
 					The Archive
 				</h3>
-				<ul className="space-y-4 m-3">
+				<ul className="space-y-4 m-2 pt-4">
 					{posts.map((post) => (
 						<Link
 							to={`/post/${post.slug}`}
