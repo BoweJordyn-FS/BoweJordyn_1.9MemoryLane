@@ -1,10 +1,8 @@
 ---
-title: 'Freecodecamp is the way to go'
+title: 'FreeCodeCamp — the best resource for coders at any level'
 date: 'December 23, 2025'
-excerpt: 'React changed my life'
+excerpt: 'Ive tried a lot of platforms, and nothing comes close to freeCodeCamp. It meets you exactly where you are, whether youre just learning HTML or youre getting ready for first interview, theres a structured path waiting for you, completely free.'
 ---
-
-# Why freeCodeCamp is the best resource for coderrs at any level
 
 I was learning to code for a year and a half before I started at Full Sail. I’ve tried many different platforms, and nothing comes close to **freeCodeCamp**. I feel that way for one simple reason: it meets you where you’re at. In the beginning, when I was just learning HTML and CSS, it was the resource that helped me the most and that I retained the most. Now, at my intermediate level, freeCodeCamp has helped me understand JavaScript and React the most.
 

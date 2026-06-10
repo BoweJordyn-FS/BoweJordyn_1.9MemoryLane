@@ -19,13 +19,13 @@ const BlogPost = () => {
 			</Link>
 			<div>
 				<h1 className="text-3xl font-bold mt-10 mb-2">{data.title}</h1>
-				<h5 className="text-[#8D7762] italic">{data.excerpt}</h5>
-				<p className="text-[#8D7762] font-mono text-xs flex justify-end">
+				<h5 className="text-[#8D7762] italic mt-2">{data.excerpt}</h5>
+				<p className="text-[#8D7762] font-mono text-xs flex justify-end mt-2">
 					{data.date}
 				</p>
 			</div>
 			<hr className="fancy-rule m-6" />
-			<div className="prose prose-invert mt-6">
+			<div className="prose prose-invert m-6">
 				<ReactMarkdown>{content}</ReactMarkdown>
 			</div>
 		</article>
