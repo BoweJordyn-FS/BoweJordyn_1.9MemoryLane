@@ -9,6 +9,10 @@ const BlogPost = () => {
 	const postData = posts.find((p) => p.slug === slug);
 	const { data, content } = matter(postData.raw);
 
+	const heroSrc = data.heroImage
+		? `${import.meta.env.BASE_URL.replace(/\/$/, '')}${data.heroImage}`
+		: null;
+
 	return (
 		<article className="max-w-2xl mx-auto p-6">
 			<Link
@@ -17,6 +21,13 @@ const BlogPost = () => {
 			>
 				← all posts
 			</Link>
+			{heroSrc && (
+				<img
+					src={heroSrc}
+					alt=""
+					className="w-full h-64 object-cover rounded-lg mt-6"
+				/>
+			)}
 			<div>
 				<h1 className="text-3xl font-bold mt-10 mb-2">{data.title}</h1>
 				<h5 className="text-[#8D7762] italic mt-2">{data.excerpt}</h5>
@@ -26,7 +37,18 @@ const BlogPost = () => {
 			</div>
 			<hr className="fancy-rule m-6" />
 			<div className="prose prose-invert m-6">
-				<ReactMarkdown>{content}</ReactMarkdown>
+				<ReactMarkdown
+					components={{
+						img: ({ src, alt, ...props }) => {
+							const resolved = src?.startsWith('/')
+								? `${import.meta.env.BASE_URL.replace(/\/$/, '')}${src}`
+								: src;
+							return <img src={resolved} alt={alt} {...props} />;
+						},
+					}}
+				>
+					{content}
+				</ReactMarkdown>
 			</div>
 		</article>
 	);
