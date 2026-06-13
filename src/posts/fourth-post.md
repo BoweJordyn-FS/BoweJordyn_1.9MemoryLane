@@ -1,7 +1,7 @@
 ---
 title: 'Two Libraries That Made Connecting APIs To React A Breeze'
 date: 'June 10, 2026'
-excerpt: 'If you struggle with connecting'
+excerpt: 'I always look for ways to make my life easier. When I build a React app that connects to a RESTful API using fetch, it can get complicated. Luckily, I found a better solution for working with APIs: **Axios and TanStack Query**.'
 heroImage: '/juanjo-jaramillo-mZnx9429i94-unsplash.jpg'
 ---
 
