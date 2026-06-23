@@ -1,7 +1,7 @@
 ---
 title: 'React Native Was Expected But HArder Than I Hoped'
 date: 'June 22, 2026'
-excerpt: 'This week was my first time working with React Native. When I saw that it’s what we were learning about this week, I was excited. But once I started, I realized it wasn't going to be as easy as I’d hoped.'
+excerpt: 'This week was my first time working with React Native. When I saw that it’s what we were learning about this week, I was excited. But once I started, I realized it wasn’t going to be as easy as I’d hoped.'
 heroImage: '/brett-jordan-ZVhbwDfLtYU-unsplash.jpg'
 ---
 
